@@ -22,7 +22,7 @@ The application needs to provide the following functionality:
 
 9.	Deposit money for one student. This function is only applicable for existing students
 
- 
+
 10.	Borrow a book by a student. This consists of the following steps:
 a.	First the student needs to enter his name and student id. Here the student account is blocked, i.e. no books can be borrowed, after three consecutive wrong attempts. If name and student id yield a match in the database, the student is allowed to go to the next step.
 b.	Enter the name and author of the book that student wants to borrow. If and only if (1) a copy of this book is available, (2) the student has not reached the limit for the amount of books and (3) the amount of money in the deposit of the concerned student is at least 10 euro, the student is lent a copy of the book.
