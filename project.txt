@@ -1,4 +1,4 @@
-Database assignment – Library
+Database assignment - Library
 This assignment concerns defining your own database structure and accessing this database from a Java program.
 Students and teachers can lend books from the faculty library. Different limits for students and teachers apply regarding the amount of books that can be borrowed simultaneously. Also, students and teachers can lend the books for a different number of days. 
 Students need to deposit money in order to borrow books. In order to borrow a book a student needs to have at least 10 euro in his/her account. If a book is returned late, students and teachers need to pay a fine. For each day the book is returned late, students and teachers need to pay 0.50 euro.
@@ -39,7 +39,7 @@ b.	If this book was returned within the allowed number of days (note: this numbe
 c.	If this book was returned after the allowed number of days, the program needs to calculate the fine that needs to be paid.
 d.	If the book was lent by a teacher the fine needs to be added to the total amount that still needs to be paid by that teacher. The returned book is accepted and stored in the library again. The steps below need to be skipped.
 e.	If the book was lent by a student and the calculated fine is smaller than the deposited amount of that student, the fine needs to be subtracted from this deposit. The returned book is accepted and stored in the library again. The steps below need to be skipped. 
-f.	If the book was lent by a student and the calculated fine is larger than the deposited amount of that student, the return of the book is not accepted and this function is ended, i.e. student first needs to deposit sufficient money and then start this “return book” function again. 
+f.	If the book was lent by a student and the calculated fine is larger than the deposited amount of that student, the return of the book is not accepted and this function is ended, i.e. student first needs to deposit sufficient money and then start this "Return book" function again.
 
 13.	Generate overview of all books that are currently lent to either students or teachers. In this overview the book id, name of the book, name of student or teacher and last allowed return date needs to be presented. 
 
