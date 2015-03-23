@@ -15,9 +15,13 @@ public class Console {
 	private static JTextArea OutputArea;
 	static JFrame jf;
 	private static Date date;
-	public Console(){
+
+	/**
+	 * Needs to be run at the start of the application, this will set up the console for the application
+	 */
+	public static void initialize(){
 		date = new Date();
-		
+
 		jf = new JFrame("Database assignment Console");
 		final JScrollPane scrollPane = new JScrollPane();
 		jf.addComponentListener(new ComponentAdapter() {
@@ -29,8 +33,8 @@ public class Console {
 		jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		jf.getContentPane().setLayout(null);
 		jf.setSize(730,396);
-		
-		
+
+
 		scrollPane.setBounds(0, 0, 714, 358);
 		jf.getContentPane().add(scrollPane);
 		OutputArea = new JTextArea();
@@ -42,15 +46,13 @@ public class Console {
 		Console.out("Welcome to the console");
 		jf.setVisible(true);
 	}
-
-
 	/*
 	 * Outputs the given string to the console using an [INFO] block
 	 * for printing out errors see errorOut
 	 */
 	public static void out(String output){
 		if (output.equals(null)){
-			
+
 		}else{
 			date = Calendar.getInstance().getTime();
 			OutputArea.append("[" + date + "]");
@@ -58,9 +60,9 @@ public class Console {
 			OutputArea.append(output);
 			OutputArea.append("\n");
 		}
-		
+
 	}
-	
+
 	/*
 	 * Prints out the error to the console, uses the [ERROR] block
 	 * for printing out normal messages check the out method
@@ -72,8 +74,8 @@ public class Console {
 		OutputArea.append(error);
 		OutputArea.append("\n");
 	}
-	
-	
+
+
 	/*
 	 * makes the console reappear when you closed it
 	 */
@@ -83,6 +85,6 @@ public class Console {
 		}else{
 			jf.setVisible(true);
 		}
-		
+
 	}
 }
