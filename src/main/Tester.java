@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 
@@ -40,14 +43,16 @@ public class Tester {
 	}
 
 	private static void test(){
+		Date temp = new Date();
+		System.out.println(temp);
 		Tester.connect();
 		String querry = "SELECT * FROM `test`";	
 		try{
 			Statement testStmnt = con.createStatement();
 			ResultSet testRss = testStmnt.executeQuery(querry);
 			testRss.next();
-			int temp = testRss.getInt(1);
-			System.out.println(temp);
+			int temp2 = testRss.getInt(1);
+			System.out.println(temp2);
 			Tester.close();
 		}catch (SQLException e){
 			e.printStackTrace();
